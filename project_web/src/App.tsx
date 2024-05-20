@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
+import Navbar from './components/Navbar';
 import ProductList from './components/ProductList';
 import { Product } from './types/Product';
 
@@ -24,7 +25,7 @@ const App: React.FC = () => {
       },
       {
         id: 3,
-        name: 'Air Jordan 5',
+        name: 'Air Jordan 5 «Olive»',
         price: 210,
         description: 'Air Jordan 5 «Olive», которые изначально вышли в 2006 году, впервые вернутся весной 2024 года. Эта пара была частью коллекции Jordan Brand Lifestyle (LS) и вышла вместе с соответствующей одеждой. Эту расцветку многие считают одной из лучшей в линейке AJ5 за все время.',
         imageUrl: 'https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco,u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/baaa5611-b560-4e94-a4e2-61b698c68432/air-jordan-5-retro-big-kids-shoes-Q7w8vv.png',
@@ -36,8 +37,11 @@ const App: React.FC = () => {
 
   return (
     <div className="App">
-      <h1>Frozin`s</h1>
-      <ProductList products={products} />
+      <Navbar />
+      <div className="content">
+        <h1>Frozin`s</h1>
+       <ProductList products={products} />
+      </div>
     </div>
   );
 };
