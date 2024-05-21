@@ -1,48 +1,75 @@
 html, body, #root {
   height: 100%;
   margin: 0;
-  padding: 0;
 }
 
 .App {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  min-height: 100vh;
-  padding: 20px;
-  padding-top: 70px;
+  text-align: center;
+  width: auto;
   box-sizing: border-box;
 }
 
-.content {
-  width: 100%;
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: #333;
+  color: white;
+  width: auto;
 }
 
-.product-list {
+.navbar-left h1 {
+  margin: 0;
+  margin-left: 150px;
+}
+
+.navbar-right button{
+  margin: 10px;
+}
+
+.sneaker-list {
   display: flex;
-  flex-wrap: nowrap;
-  justify-content: left;
+  flex-wrap: wrap;
+  justify-content: center;
   width: 100%;
   gap: 5px; 
   padding: 10px;
 }
 
-.product-card {
+.sneaker-card {
   border: 1px solid #ccc;
-  padding: 20px;
-  width: 200px;
-  text-align: left;
+  border-radius: 8px;
+  overflow: hidden;
+  width: 300px;
+  margin: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
 }
 
-.product-card img {
+.sneaker-card p {
+  padding: 0px 10px 0px 10px;
+}
+
+.sneaker-card h2 {
+  padding: 0px 10px 0px 10px;
+}
+
+.sneaker-card img {
   width: 100%;
   height: auto;
+  overflow: hidden;
 }
 
-.product-card h2 {
-  font-size: 2rem;
+.sneaker-card:hover {
+  transform: scale(1.05);
 }
 
-.product-card p {
-  margin: 0.5rem 0;
+.sneaker-card .sneaker-price{
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-top: auto;
 }
