@@ -68,8 +68,25 @@ html, body, #root {
   transform: scale(1.05);
 }
 
-.sneaker-card .sneaker-price{
+.sneaker-card .sneaker-price {
   font-size: 1.5rem;
   font-weight: bold;
+}
+
+.sneaker-card-footer {
   margin-top: auto;
+  display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sneaker-card .add-to-cart-button {
+  background-color: aqua;
+  color: #333;
+  border-radius: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-right: 10px;
+  cursor: pointer;
 }
