@@ -1,6 +1,10 @@
 import React from 'react';
 
-const Navbar: React.FC = () => {
+interface NavbarProps {
+    onCartClick: () => void;
+}
+
+const Navbar: React.FC<NavbarProps> = ({ onCartClick }) => {
     return (
         <nav className="navbar">
             <div className="navbar-left">
@@ -8,7 +12,7 @@ const Navbar: React.FC = () => {
             </div>
             <div className="navbar-right">
                 <button>Авторизация</button>
-                <button>Корзина</button>
+                <button onClick={onCartClick}>Корзина</button>
             </div>
         </nav>
     );
