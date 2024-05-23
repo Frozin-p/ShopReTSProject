@@ -1,11 +1,15 @@
-﻿namespace SneakerStoreApi.Models
+﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+
+namespace SneakerStoreApi.Models
 {
     public class Sneaker
     {
+        [Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
-        public string Name { get; set; }
-        public string Description { get; set; }
+        [MaxLength(256)] public string Name { get; set; }
+        [MaxLength(1024)] public string Description { get; set; }
         public int Price { get; set; }
-        public string ImageUrl { get; set; }
+        [MaxLength(1024)] public string ImageUrl { get; set; }
     }
 }

@@ -14,7 +14,7 @@ const SneakerList: React.FC = () => {
 
     useEffect(() => {
         const fetchSneakers = async () => {
-            const response = await fetch('https://localhost:7245/api/sneakers');
+            const response = await fetch('https://localhost:7245/api/sneakers/GetSneakers');
             const data = await response.json();
             setSneakers(data);
         };
