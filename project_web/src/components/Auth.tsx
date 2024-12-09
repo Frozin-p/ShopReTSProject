@@ -10,26 +10,6 @@ const AuthModal: React.FC<AuthModalProps> = ({ onClose }) => {
     const [login, setLogin] = useState('');
     const [password, setPassword] = useState('');
 
-    // const handleSubmit = async (event: React.FormEvent) => {
-    //     event.preventDefault();
-    //     const endpoint = isLogin ? '/api/Auth/login' : '/api/Auth/register';
-    //     const response = await fetch(`https://localhost:7245${endpoint}`, {
-    //         method: 'POST',
-    //         headers: {
-    //             'Content-Type': 'application/json',
-    //         },
-    //         body: JSON.stringify({ login, password }),
-    //     });
-
-    //     if (response.ok) {
-    //         alert('Registration successful');
-    //         onClose();
-    //     } else {
-    //         const errorText = await response.text();
-    //         alert('Error: ' + errorText);
-    //     }
-    // };
-
     const handleSubmit = async (event: React.FormEvent) => {
         event.preventDefault();
 
@@ -83,16 +63,16 @@ const AuthModal: React.FC<AuthModalProps> = ({ onClose }) => {
                 <button className="close-button" onClick={onClose}>X</button>
                 <h2>{isLogin ? 'Вход' : 'Регистрация'}</h2>
                 <form onSubmit={handleSubmit}>
-                    <input
+                    <input className='login'
                         type="text"
-                        placeholder="Логин"
+                        placeholder=" Логин"
                         value={login}
                         onChange={(e) => setLogin(e.target.value)}
                         required
                     />
-                    <input
+                    <input className='pass'
                         type="password"
-                        placeholder="Пароль"
+                        placeholder=" Пароль"
                         value={password}
                         onChange={(e) => setPassword(e.target.value)}
                         required

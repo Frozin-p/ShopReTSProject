@@ -36,7 +36,7 @@ const Cart: React.FC<CartProps> = ({ onClose }) => {
                                 <img src={item.imageUrl} alt={item.name} />
                                 <div>
                                     <h3>{item.name}</h3>
-                                    <p>${item.price.toFixed(2)}</p>
+                                    <p className='price-in-cart'>${item.price.toFixed(2)}</p>
                                     <button className='remove-from-cart' onClick={() => removeFromCart(item.id)}>Удалить</button>
                                 </div>
                             </li>
