@@ -1,7 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System;
-using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 using Backend_SneakerShop.Data;
@@ -52,14 +51,5 @@ namespace Backend_SneakerShop.Controllers
                 return StatusCode(500, "Internal server error");
             }
         }
-    }
-
-    public class UserDto
-    {
-        [Required]
-        public string Login { get; set; }
-
-        [Required]
-        public string Password { get; set; }
     }
 }
