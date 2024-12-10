@@ -21,8 +21,9 @@
 
   <ItemGroup>
     <Folder Include="AuthorizationService\" />
+    <Folder Include="Controllers\" />
+    <Folder Include="Models\" />
     <Folder Include="ProductService\" />
-    <Folder Include="OrderService\" />
   </ItemGroup>
 
 </Project>
